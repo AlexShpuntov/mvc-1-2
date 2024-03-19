@@ -19,9 +19,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(PORT, () => {
-  console.log(`Server is running on ${PORT}`);
-});
 
 function renderPage(res, fileName) {
   const filePath = path.join(__dirname, "views", `${fileName}.html`);
@@ -44,13 +41,16 @@ function handleFormSubmission(req, res) {
   });
   req.on("end", () => {
     console.log("Form data:", body);
-    res.writeHead(302, { Location: "/student" });
+    res.writeHead(302, { "Location": "/student" });
     res.end();
   });
 }
-
 
 function handleNotFound(req, res) {
   res.writeHead(404, { "Content-Type": "text/html" });
   res.end("404 Not Found");
 }
+
+server.listen(PORT, () => {
+  console.log(`Server is running on ${PORT}`);
+});

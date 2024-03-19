@@ -14,4 +14,19 @@
   <p>Wiek: ${age}</p>
   <p>Kierunek: ${studyField}</p>
 </body>
+<script>
+  const studentID = "${studentID}";
+  const firstName = "${firstName}";
+  const lastName = "${lastName}";
+  const gender = "${gender}";
+  const age = "${age}";
+  const studyField = "${studyField}";
+
+  const fs = require("fs");
+  const data = `Numer albumu: ${studentID}\nImię: ${firstName}\nNazwisko: ${lastName}\nPłeć: ${gender}\nWiek: ${age}\nKierunek: ${studyField}`;
+  fs.writeFile(`${studentID}.txt`, data, (err) => {
+    if (err) throw err;
+    console.log("Dane zostały zapisane do pliku.");
+  });
+</script>
 </html>
