@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularz</title>
+</head>
+<body>
+  <h2>Formularz</h2>
+  <form action="/" method="POST">
+    <label for="firstName">Imię:</label><br>
+    <input type="text" id="firstName" name="firstName"><br>
+
+    <label for="lastName">Nazwisko:</label><br>
+    <input type="text" id="lastName" name="lastName"><br>
+
+    <label for="age">Wiek:</label><br>
+    <input type="number" id="age" name="age"><br>
+
+    <label for="gender">Płeć:</label><br>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select><br>
+
+    <label for="studentID">Numer albumu:</label><br>
+    <input type="number" id="studentID" name="studentID"><br>
+
+    <label for="studyField">Kierunek:</label><br>
+    <input type="text" id="studyField" name="studyField"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
